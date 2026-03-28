@@ -117,6 +117,42 @@
 }
 ```
 
+4.3. tsconfig.base.json
+
+```json
+{
+  "compilerOptions": {
+    // Environment setup & latest features
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "target": "ESNext",
+    "module": "Preserve",
+    "moduleDetection": "force",
+    "jsx": "preserve",
+    "allowJs": true,
+
+    // Bundler mode
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    "types": ["bun", "node"],
+
+    // Some stricter flags (disabled by default)
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false
+  }
+}
+```
+
 4.2. tsconfig.app.json (The Library Core) ไฟล์นี้สำคัญที่สุด เพราะควบคุมการเช็คประเภทข้อมูล (Type Checking) ของ Source Code ทั้งหมดที่จะถูก Build ออกไปเป็น Library ให้คนอื่นใช้งาน
 
 ```json
@@ -154,7 +190,7 @@
 
 5. 🔧 เตรียมไฟล์ vite.config.ts
 
-หน้าที่หลักของ Vite ในนี้ไม่ได้ใช้เพื่อรันเง็บไซต์ทั่วไป แต่เราจะใช้ใน **"Library Mode"** คือการเอาไฟล์ .vue, .ts และไฟล์ CSS ทั้งหมดที่คุณเขียน มารวมกัน(Bundle) ให้กลายเป็นไฟล์ JavaScript ชุดเดียว เพื่อให้คนอื่นสามารถ import ไปใช้งานได้
+หน้าที่หลักของ Vite ในนี้ไม่ได้ใช้เพื่อรันเว็บไซต์ทั่วไป แต่เราจะใช้ใน **"Library Mode"** คือการเอาไฟล์ .vue, .ts และไฟล์ CSS ทั้งหมดที่คุณเขียน มารวมกัน(Bundle) ให้กลายเป็นไฟล์ JavaScript ชุดเดียว เพื่อให้คนอื่นสามารถ import ไปใช้งานได้
 
 ```typescript
 import { defineConfig } from "vite";
