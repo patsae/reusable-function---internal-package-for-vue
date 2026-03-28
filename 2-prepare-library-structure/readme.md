@@ -6,15 +6,15 @@
 
 🚀 1. Bun.js (The Runtime & Package Manager)
 
-    ใช้รันคำสั่งต่างๆ แทน Node.js, ใช้ติดตั้ง Library (Dependencies) ได้รวดเร็วมาก และช่วยจัดการโครงสร้างโปรเจกต์เบื้องต้นผ่าน bun init
+- ใช้รันคำสั่งต่างๆ แทน Node.js, ใช้ติดตั้ง Library (Dependencies) ได้รวดเร็วมาก และช่วยจัดการโครงสร้างโปรเจกต์เบื้องต้นผ่าน bun init
 
 ⚙️ 2. tsconfig (The Rules)
 
-    กำหนดว่า TypeScript ควรจะตรวจสอบ Code ของเราเข้มงวดแค่ไหน โดยเราแยกไฟล์เพื่อให้ "ตัว Component" (Source Code) และ "เครื่องมือตั้งค่า" (Tooling) มีกฎที่แยกออกจากกัน ไม่ปะปนกัน
+- กำหนดว่า TypeScript ควรจะตรวจสอบ Code ของเราเข้มงวดแค่ไหน โดยเราแยกไฟล์เพื่อให้ "ตัว Component" (Source Code) และ "เครื่องมือตั้งค่า" (Tooling) มีกฎที่แยกออกจากกัน ไม่ปะปนกัน
 
 📦 3. Vite (The Builder)
 
-    นำไฟล์ .vue และ .ts ที่เราเขียนแยกๆ ไว้ มา Bundle (รวมร่าง) ให้กลายเป็นไฟล์เดียวในโฟลเดอร์ dist เพื่อให้คนอื่นสามารถนำ Package ไปติดตั้งใช้งานได้ง่ายๆ พร้อมทั้งสร้างไฟล์ CSS และไฟล์ Type (.d.ts) ให้เราอัตโนมัติ
+- นำไฟล์ .vue และ .ts ที่เราเขียนแยกๆ ไว้ มา Bundle (รวมร่าง) ให้กลายเป็นไฟล์เดียวในโฟลเดอร์ dist เพื่อให้คนอื่นสามารถนำ Package ไปติดตั้งใช้งานได้ง่ายๆ พร้อมทั้งสร้างไฟล์ CSS และไฟล์ Type (.d.ts) ให้เราอัตโนมัติ
 
 # Workshop
 
@@ -29,6 +29,19 @@
    1.2 bun.lockb: ไฟล์ Lock ของ Bun (เป็น Binary file) ซึ่งช่วยให้การติดตั้ง Library ในครั้งต่อๆ ไปเร็วขึ้นมาก
    1.3 tsconfig.json: ไฟล์ตั้งค่า TypeScript ที่ Bun เตรียมมาให้พร้อมใช้งานทันที
    1.4 index.ts: ไฟล์เริ่มต้น (Entry point) ของโปรเจกต์
+
+   ### ไฟล์โครงสร้าง project ที่ได้จาก bun init
+
+   ```
+   project-card
+   |- node_modules/
+   |-.gitignore
+   |- bun.lock
+   |- index.ts
+   |- package.json
+   |- readme.md
+   |- tsconfig.json
+   ```
 
 2. 📦 ติดตั้ง Package สำหรับพัฒนา Library
    - Dependencies (Library หลักที่ Code ต้องใช้)
