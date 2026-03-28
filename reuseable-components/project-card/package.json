@@ -1,0 +1,43 @@
+{
+  "name": "@devfolio/project-card",
+  "version": "0.0.2",
+  "private": false,
+  "publishConfig": {
+    "@devfolio:registry": "https://git.med.cmu.ac.th/api/v4/projects/459/packages/npm/"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/project-card.umd.cjs",
+  "module": "./dist/project-card.js",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/main.d.ts",
+      "import": "./dist/project-card.js",
+      "require": "./dist/project-card.umd.cjs"
+    },
+    "./style.css": "./dist/project-card.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "bun type-check && vite build",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build"
+  },
+  "dependencies": {
+    "vue": "^3.5.31"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.11",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vue/tsconfig": "^0.9.1",
+    "vite": "^8.0.3",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-vue-devtools": "^8.1.1",
+    "vue-tsc": "^3.2.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

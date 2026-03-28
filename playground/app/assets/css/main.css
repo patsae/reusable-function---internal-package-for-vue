@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@import "../../../node_modules/@devfolio/profile-card/dist/profile-card.css";
+@import "../../../node_modules/@devfolio/project-card/dist/project-card.css";
+@import "../../../node_modules/@devfolio/skill-badge/dist/skill-badge.css";
+@import "../../../node_modules/@devfolio/social-badge/dist/social-badge.css";

@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*", "eslint.config.*", "scripts/**/*"],
+  "compilerOptions": {
+    "composite": true,
+    "target": "ESNext",
+    "module": "Preserve",
+    "moduleResolution": "bundler",
+
+    "types": ["bun", "node"],
+
+    "noEmit": true
+  }
+}

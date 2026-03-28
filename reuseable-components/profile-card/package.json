@@ -1,0 +1,43 @@
+{
+  "name": "@devfolio/profile-card",
+  "version": "0.0.1",
+  "private": false,
+  "publishConfig": {
+    "@devfolio:registry": "https://git.med.cmu.ac.th/api/v4/projects/457/packages/npm/"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/profile-card.umd.cjs",
+  "module": "./dist/profile-card.js",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/main.d.ts",
+      "import": "./dist/profile-card.js",
+      "require": "./dist/profile-card.umd.cjs"
+    },
+    "./style.css": "./dist/profile-card.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "bun type-check && vite build",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build"
+  },
+  "dependencies": {
+    "vue": "^3.5.31"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vue/tsconfig": "^0.9.1",
+    "vite": "^8.0.3",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-vue-devtools": "^8.1.1",
+    "vue-tsc": "^3.2.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

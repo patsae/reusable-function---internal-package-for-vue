@@ -88,12 +88,12 @@ bun run build
 
 เราจะใช้มาตรฐาน Semantic Versioning (SemVer) ในการระบุความเปลี่ยนแปลง โดยปกติเราจะเริ่มที่เลขชุดสุดท้าย (Patch) สำหรับการแก้ไขเล็กน้อยหรือเพิ่มฟีเจอร์ที่ไม่กระทบของเดิม
 
-ใช้คำสั่งของ Bun เพื่อขยับ Version โดยอัตโนมัติ
+ใช้คำสั่งของ npm เพื่อขยับ Version โดยอัตโนมัติ (⚠️ Bun ยังไม่มีคำสั่งขยับ version)
 
 ```
-bun version patch   // (0.0.x) ใช้เมื่อแก้ไข Bug หรือปรับปรุงเล็กน้อย
-bun version minor   // (0.x.0) ใช้เมื่อมีการเพิ่ม Feature ใหม่ (เช่น เพิ่ม Skill Badge Component)
-bun version major   // (x.0.0) ใช้เมื่อมีการเปลี่ยนแปลงครั้งใหญ่ที่ทำให้ Code เดิมของคนอื่นอาจจะพัง (Breaking Changes)
+npm version patch   // (0.0.x) ใช้เมื่อแก้ไข Bug หรือปรับปรุงเล็กน้อย
+npm version minor   // (0.x.0) ใช้เมื่อมีการเพิ่ม Feature ใหม่ (เช่น เพิ่ม Skill Badge Component)
+npm version major   // (x.0.0) ใช้เมื่อมีการเปลี่ยนแปลงครั้งใหญ่ที่ทำให้ Code เดิมของคนอื่นอาจจะพัง (Breaking Changes)
 ```
 
 3. การ Publish ใหม่ (Re-Publish)

@@ -1,0 +1,43 @@
+{
+  "name": "@devfolio/skill-badge",
+  "version": "0.0.0",
+  "type": "module",
+  "private": false,
+  "publishConfig": {
+    "@devfolio:registry": "https://git.med.cmu.ac.th/api/v4/projects/460/packages/npm/"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/skill-badge.umd.cjs",
+  "module": "./dist/skill-badge.js",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/main.d.ts",
+      "import": "./dist/skill-badge.js",
+      "require": "./dist/skill-badge.umd.cjs"
+    },
+    "./style.css": "./dist/skill-badge.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "bun type-check && vite build",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.11",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vue/tsconfig": "^0.9.1",
+    "vite": "^8.0.3",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-vue-devtools": "^8.1.1",
+    "vue-tsc": "^3.2.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "vue": "^3.5.31"
+  }
+}
