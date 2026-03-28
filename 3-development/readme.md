@@ -2,7 +2,7 @@
 
 หลังจากที่ได้เตรียมโครงสร้างพื้นฐาน (Infrastructure) พร้อมแล้ว บทนี้เราจะเข้าสู่การลงมือสร้าง Source Code จริงๆ โดยเราจะเน้นไปที่การสร้าง Component จริงๆ
 
-# Workshop
+# 🏋️‍♂️ Workshop
 
 สร้างโฟลเดอร์ /src ขึ้นมาภายใน project ของเรา
 
@@ -138,7 +138,7 @@ import ProjectCard from "./components/ProjectCard.vue";
 </script>
 ```
 
-# 🫓 ทดสอบ component
+# 💻 ทดสอบ component
 
 หลังจากที่เราเขียน Code ใน App.vue และ ProfileCard.vue เสร็จแล้ว ขั้นตอนสำคัญคือการรันระบบขึ้นมาดูหน้าตาจริงๆ (Playground) เพื่อตรวจสอบว่า Props และ CSS ทำงานถูกต้องหรือไม่
 
