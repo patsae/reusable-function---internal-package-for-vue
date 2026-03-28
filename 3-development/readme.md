@@ -137,3 +137,34 @@ const {
 import ProjectCard from "./components/ProjectCard.vue";
 </script>
 ```
+
+# 🫓 ทดสอบ component
+
+หลังจากที่เราเขียน Code ใน App.vue และ ProfileCard.vue เสร็จแล้ว ขั้นตอนสำคัญคือการรันระบบขึ้นมาดูหน้าตาจริงๆ (Playground) เพื่อตรวจสอบว่า Props และ CSS ทำงานถูกต้องหรือไม่
+
+เพื่อให้ Vite สามารถรันได้ เราต้องมีไฟล์ index.html อยู่ที่ Root Project (นอกโฟลเดอร์ src) เพื่อเชื่อมไปยัง main.ts
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Showcase</title>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+```
+
+จากนั้นทดสอบ component ด้วยการรันคำสั่ง
+
+```
+bun run dev
+```
+
+จากนั้นเปิด Browser คุณควรจะเห็น Project Card แสดงขึ้นมา
