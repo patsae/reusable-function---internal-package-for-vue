@@ -117,7 +117,7 @@
 }
 ```
 
-4.3. tsconfig.base.json
+4.2. tsconfig.base.json
 
 ```json
 {
@@ -153,7 +153,7 @@
 }
 ```
 
-4.2. tsconfig.app.json (The Library Core) ไฟล์นี้สำคัญที่สุด เพราะควบคุมการเช็คประเภทข้อมูล (Type Checking) ของ Source Code ทั้งหมดที่จะถูก Build ออกไปเป็น Library ให้คนอื่นใช้งาน
+4.3. tsconfig.app.json (The Library Core) ไฟล์นี้สำคัญที่สุด เพราะควบคุมการเช็คประเภทข้อมูล (Type Checking) ของ Source Code ทั้งหมดที่จะถูก Build ออกไปเป็น Library ให้คนอื่นใช้งาน
 
 ```json
 {
@@ -169,7 +169,7 @@
 }
 ```
 
-4.3. tsconfig.bun.json (The Tooling Config) ไฟล์นี้มีไว้เพื่อจัดการ "เครื่องมือ" ที่เราใช้พัฒนา เช่น vite.config.ts หรือไฟล์ Test ต่างๆ ซึ่งรันบน Bun Runtime
+4.4. tsconfig.bun.json (The Tooling Config) ไฟล์นี้มีไว้เพื่อจัดการ "เครื่องมือ" ที่เราใช้พัฒนา เช่น vite.config.ts หรือไฟล์ Test ต่างๆ ซึ่งรันบน Bun Runtime
 
 ```json
 {
@@ -221,8 +221,12 @@ export default defineConfig({
     lib: {
       // ใช้ import.meta.dir เพื่ออ้างอิง path ปัจจุบันตามมาตรฐาน Bun/ESM
       entry: resolve(process.cwd(), "lib/main.ts"),
-      name: "ProfileCard", // แนะนำใช้ PascalCase สำหรับ UMD name
+
+      // กำหนดชื่อไฟล์ที่จะ build ให้ตรงกับ Project ของเรา
+      // แนะนำใช้ PascalCase สำหรับ UMD name
+      name: "ProfileCard",
       fileName: "profile-card",
+
       formats: ["es", "umd"], // ระบุ Format ที่ต้องการชัดเจน
     },
     rollupOptions: {

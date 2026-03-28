@@ -25,9 +25,9 @@
 
 ในไฟล์ .npmrc ให้แก้ไขดังนี้
 
-> <<project_group>> คือชื่อกลุ่ม project ของเรา
-> <<git-lab-url>> คือ Gitlab URL ที่เราจะใช้เก็บ Internal Package
-> <<project_id>> คือ project id ของเรา
+> <<project_group>> คือชื่อกลุ่ม project ของเรา  
+> <<git-lab-url>> คือ Gitlab URL ที่เราจะใช้เก็บ Internal Package  
+> <<project_id>> คือ project id ของเรา  
 > <<project_group>> คือ token สำหรับเข้าถึง project ของเรา
 
 2. 💳 การหา Project ID:
