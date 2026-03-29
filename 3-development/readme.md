@@ -44,6 +44,11 @@ h2,
 h3 {
   margin: 0;
 }
+
+h3 {
+  font-weight: bolder;
+}
+
 .devfolio-project-card-wrapper {
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -52,6 +57,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
+  background: #fff;
 }
 
 .devfolio-project-card-content {
@@ -63,6 +69,7 @@ h3 {
   padding: 1rem;
   box-shadow: 0 0 10px #c9c9c9;
   margin-top: 0.5rem;
+  background: #fff;
 }
 
 .devfolio-project-card-img-wrapper {
@@ -84,13 +91,33 @@ h3 {
 </style>
 
 <script setup lang="ts">
-interface projectItems {
+defineOptions({
+  name: "ProjectCard",
+});
+
+export interface projectItems {
+  /** ชื่อโปรเจค */
   title: string | undefined;
+
+  /** URL หรือ path ของรูปภาพ */
   image: string | undefined;
+
+  /** คำอธิบายสั้น ๆ ของโปรเจค */
   description: string | undefined;
 }
 
-const {
+/**
+ * Props ของ ProjectCard
+ */
+export interface ProjectCardProps {
+  /** ชื่อหัวข้อของ Card */
+  cardTitle?: string;
+
+  /** รายการโปรเจคทั้งหมด */
+  projectItems?: projectItems[];
+}
+
+export const {
   cardTitle = "Main Untitle",
   projectItems = [
     {
@@ -99,16 +126,7 @@ const {
       description: "",
     },
   ],
-} = defineProps<{
-  /** @param {string|undefined} cardTitle - ชื่อ Card Title */
-  cardTitle?: string;
-  /** @param {object|undefined} projectItems - Array object ของ project
-   ** @param {string|undefined} projectItems.title: string | undefined; - ชื่อ Project
-   ** @param {string|undefined} projectItems.image: string | undefined; - Path ของรูปภาพ Profile (เช่น /images/avatar.png)
-   ** @param {string|undefined} projectItems.description: string | undefined; - คำอธิบายรายละเอียดสั้นๆ เกี่ยวกับตัวโปรเจค
-   */
-  projectItems?: projectItems[];
-}>();
+} = defineProps<ProjectCardProps>();
 </script>
 ```
 
